@@ -68,10 +68,10 @@ export default function Header() {
                 Login
               </Link>
               <Link
-                href={`${
-                  process.env.NEXT_PUBLIC_APP_SUBDOMAIN ||
-                  "https://app.tryinterviewcoach.com"
-                }/signup`}
+              href={`${
+                process.env.NEXT_PUBLIC_APP_SUBDOMAIN ||
+                "https://app.tryinterviewcoach.com"
+              }/login`}
                 className={cn(
                   buttonVariants({ variant: "default" }),
                   "w-full sm:w-auto text-background"

@@ -21,7 +21,7 @@
 
 [[redirects]]
   from = "/signup"
-  to = "https://app.tryinterviewcoach.com/signup"
+  to = "https://app.tryinterviewcoach.com/login"
   status = 302
 
 # Redirect www to non-www

@@ -31,7 +31,7 @@
     },
     {
       "source": "/signup",
-      "destination": "https://app.tryinterviewcoach.com/signup",
+      "destination": "https://app.tryinterviewcoach.com/login",
       "permanent": false
     }
   ]

@@ -86,8 +86,8 @@ export const siteConfig = {
     {
       name: "BETA ACCESS",
       href:
-        process.env.NEXT_PUBLIC_APP_SUBDOMAIN ||
-        "https://app.tryinterviewcoach.com",
+        (process.env.NEXT_PUBLIC_APP_SUBDOMAIN ||
+        "https://app.tryinterviewcoach.com") + "/login",
       price: "Free",
       period: "during beta",
       yearlyPrice: "Free",

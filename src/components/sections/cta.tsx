@@ -15,10 +15,10 @@ export default function CtaSection() {
     >
       <div className="flex flex-col w-full sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
         <Link
-          href={`${
-            process.env.NEXT_PUBLIC_APP_SUBDOMAIN ||
-            "https://app.tryinterviewcoach.com"
-          }/signup`}
+              href={`${
+                process.env.NEXT_PUBLIC_APP_SUBDOMAIN ||
+                "https://app.tryinterviewcoach.com"
+              }/login`}
           className={cn(
             buttonVariants({ variant: "default" }),
             "w-full sm:w-auto text-background"
