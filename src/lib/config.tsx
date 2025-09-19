@@ -24,7 +24,13 @@ export const siteConfig = {
       content: {
         main: {
           icon: (
-            <Image src="/logo.png" alt="InterviewCoach" width={24} height={24} className="h-6 w-6" />
+            <Image
+              src="/logo.png"
+              alt="InterviewCoach"
+              width={24}
+              height={24}
+              className="h-6 w-6"
+            />
           ),
           title: "InterviewCoach",
           description: "Practice mock interviews with AI feedback.",

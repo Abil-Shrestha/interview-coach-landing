@@ -10,15 +10,17 @@ export default function Author({
   imageOnly,
 }: {
   name: string;
-  image: string;
+  image?: string;
   twitterUsername: string;
   updatedAt?: string;
   imageOnly?: boolean;
 }) {
+  const avatarSrc = image || `https://ui-avatars.com/api/?name=${encodeURIComponent(name)}&background=6366f1&color=fff`;
+
   if (imageOnly) {
     return (
       <Image
-        src={image}
+        src={avatarSrc}
         alt={name}
         width={36}
         height={36}
@@ -31,7 +33,7 @@ export default function Author({
     return (
       <div className="flex items-center space-x-3">
         <Image
-          src={image}
+          src={avatarSrc}
           alt={name}
           width={36}
           height={36}
@@ -58,7 +60,7 @@ export default function Author({
       rel="noopener noreferrer"
     >
       <Image
-        src={image}
+        src={avatarSrc}
         alt={name}
         width={40}
         height={40}
