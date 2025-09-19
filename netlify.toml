@@ -1,0 +1,32 @@
+[build]
+  command = "bun run build"
+  publish = ".next"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+[[redirects]]
+  from = "/app/*"
+  to = "https://app.tryinterviewcoach.com/:splat"
+  status = 302
+
+[[redirects]]
+  from = "/login"
+  to = "https://app.tryinterviewcoach.com/login"
+  status = 302
+
+[[redirects]]
+  from = "/signup"
+  to = "https://app.tryinterviewcoach.com/signup"
+  status = 302
+
+# Redirect www to non-www
+[[redirects]]
+  from = "https://www.tryinterviewcoach.com/*"
+  to = "https://tryinterviewcoach.com/:splat"
+  status = 301
+  force = true
