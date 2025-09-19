@@ -74,16 +74,9 @@ export default function Header() {
                 }/signup`}
                 className={cn(
                   buttonVariants({ variant: "default" }),
-                  "w-full sm:w-auto text-background flex gap-2"
+                  "w-full sm:w-auto text-background"
                 )}
               >
-                <Image
-                  src="/logo.png"
-                  alt={siteConfig.name}
-                  width={24}
-                  height={24}
-                  className="h-6 w-6"
-                />
                 Get Started for Free
               </Link>
             </div>

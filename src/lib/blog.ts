@@ -98,11 +98,11 @@ async function getAllPosts(dir: string) {
 
 export async function getBlogPosts() {
   const contentDir = path.join(process.cwd(), "content");
-  
+
   // Check if content directory exists
   if (!fs.existsSync(contentDir)) {
     return [];
   }
-  
+
   return getAllPosts(contentDir);
 }
