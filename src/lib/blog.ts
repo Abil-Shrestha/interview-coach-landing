@@ -36,7 +36,12 @@ function parseFrontmatter(fileContent: string) {
 }
 
 function getMDXFiles(dir: string) {
-  return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  try {
+    return fs.readdirSync(dir).filter((file) => path.extname(file) === ".mdx");
+  } catch (error) {
+    // Return empty array if directory doesn't exist
+    return [];
+  }
 }
 
 export async function markdownToHTML(markdown: string) {
@@ -92,5 +97,12 @@ async function getAllPosts(dir: string) {
 }
 
 export async function getBlogPosts() {
-  return getAllPosts(path.join(process.cwd(), "content"));
+  const contentDir = path.join(process.cwd(), "content");
+  
+  // Check if content directory exists
+  if (!fs.existsSync(contentDir)) {
+    return [];
+  }
+  
+  return getAllPosts(contentDir);
 }
